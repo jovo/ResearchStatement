@@ -1,0 +1,157 @@
+\documentclass[11pt]{article}
+\input{preamble.tex}
+
+\renewcommand{\para}[1]{\vspace{-10pt}\fontsize{10pt}{0pt}\paragraph{#1}}
+\rhead{\fancyplain{}{}}
+
+
+\let\oldbibliography\thebibliography
+\renewcommand{\thebibliography}[1]{\oldbibliography{#1}
+\setlength{\itemsep}{0pt}} %Reducing spacing in the bibliography.
+
+
+\usepackage{setspace}
+\singlespacing
+
+\setlength{\parskip}{0em}
+
+\title{\vspace{-85pt} {\large \bb{Research Statement
+, Joshua T.~Vogelstein}
+}
+% \vspace{-25pt}
+}
+\date{}
+
+\begin{document}
+\pagenumbering{gobble}
+
+% \pagenumbering{arabic}
+% \setcounter{page}{1}
+\maketitle
+
+% \vspace{5pt}
+% \begin{mdframed} \cb{Summary} \end{mdframed}
+
+% \para{Introduction}
+The 20$^{th}$ century witnessed amazing advancements in science, medicine, and technology, creating  unprecedented opportunities and challenges in the 21$^{st}$ century.  For example, while humans are living longer than ever, mental and behavioral disorders are the leading cause of years lived with disabilities worldwide.\endnote{Whiteford et al. (2013) \emph{The Lancet}, Vigo et al. (2016) \emth{The Lancet}.} Similarly, while machine intelligence now bests human intelligence in a wide variety of tasks, from arithmetic to Go, tasks as simple as driving a car remain  out of reach. In our view, these two facts: (i) the prevalence of mental and behavioral disorders, and (ii) the current limitations of machine intelligence, create new opportunities that society is now poised to tackle. 
+Below we describe the three main threads of our research aimed tackling both together, based on the belief that  the secret to both is a deeper understanding of learning, memory, and intelligence.
+
+
+% @jovo: add summary sentence of three threads
+The above described foci are designed and built in the service of answering fundamental scientific questions.
+We will combine and use the above tools to decipher the ``connectome code'', a new discipline we are creating in neuroscience.  The theory of neural coding seeks to explain the relationship between the activity of the brain and the present environment.  Likewise, the connectome code seeks to explain the relationship between the connectivity of the brain and the organism's histories, including genetic and environmental. We have begun pursuing the connectome code using our tools and a wide diversity of datasets  \cite{Hofer2011b, Craddock2013c, Airan15a, marta, Kasthuri15a}. We will continue this trend, employing and extending the statistical and computational tools described above in service of this scientific goal, eventually gaining an understanding of the connectome code, and using it to improve mental health.
+
+
+% Neuroscience, statistics, biomedical engineering, computer science, and data science are all at the precipice of a revolution.
+% The $20^{th}$ century erupted into the modern era for each of these fields.  And yet, cultural and technological changes are enabling transformations in each of these fields, due to access to big data and experimental and computing technologies.
+% To revolutionize these fields we conduct research at their intersecting points, to enable hybrid vigor from cross-fertilization of ideas.  Specifically, in the next five years, my team will enable and generate novel discoveries and insights into human intelligence via developing and applying transformational tools in machine intelligence, and vice versa. Specifically our efforts will include the following five foci.
+
+
+
+
+
+\vspace{15pt}
+\begin{mdframed} \cb{\headingfont Develop Foundational Theory and Methods for the Analysis and Understanding of 21$^{st}$ Century Data} \end{mdframed}
+
+% \para{Develop Foundational Theory, Methods and Algorithms for the Analysis and Understanding of Modern Data}
+%
+$20^{th}$ century  statistics and data science largely focused on theory and methods for vector-valued or Euclidean data with sample sizes large relative to the number of features or dimensions, and data small enough to fit in  main memory.
+While progress has been tremendous, such tools are not appropriate or useful for many modern datasets, such as those encountered in genetics and neuroscience.  In particular, because the dimensionality of data can now be so large, classical statistical tools require either more data samples or more computational power than we currently have available to us.
+Moreover, such tools discard valuable information when the data are structured, such as texts, images, genomes, connectomes, and shapes.
+% @jovo: requirement for modern methods
+% 
+We therefore develop statistical theory and methods for modern datasets.  This includes methods for testing and classification of wide data (low sample size and high-dimensional data) \cite{RerF,MGC},
+images \cite{misha13}, shapes \cite{kutten2016deformably, kutten2016diffeomorphic},
+as well as foundational theory and methods for  networks, potentially including attributes,  and populations thereof \cite{Vogelstein11a, Fiori13a, Koutra13a, Kulkarni2013, Lyzinski14b, Lyzinski14a, Airan15a, Chen15c, Koutra15a, Vogelstein15a, Durante14a, Binkiewicz2014, Vogelstein09b, Vogelstein13a, Vogelstein15b}.
+%
+Crucial to the utility of these methods on modern data are efficient implementations.
+Previous strategies to address big data challenges  typically distribute computations across many nodes in a cluster, thereby causing a huge computational bottleneck communicating across nodes, as well as huge energy consumption.
+In contrast, we have developed \href{http://flashx.io}{FlashX}, a library that provides reference algorithms for low-resource analytics,
+spanning both graph \cite{Mhembere2013b,Zheng2014} and matrix \cite{zheng2016semi,zheng2016flashmatrix,knor} computational primitives.  These implementations are optimized for multi-core architectures with solid-state hard-drives, which are now standard for mobile, personal, and cloud computing.
+%
+Taken together, our work typically includes statistical theory proving when our methods perform well, computational theory proving worst case space and time budget, numerical experiments demonstrating state of the art accuracy, efficiency, and robustness, as well as operational utility on real data applications.
+By designing the methods to be simple and intuitive, these methods are poised to be the reference approaches to solving a wide variety of $21^{st}$ century problems.
+We will continue this line of work going forward, expanding our toolbox to include an ever increasing set of  reference theory and methods for modern data.
+
+% @jovo: fig 1: MGC power plot, LOL real data plot perhaps using FlashX implementation compared to LRLDA & Eigenfaces, and RerF heatmap plot.
+
+
+% In the next five years, we will complete establishing the basic theory and methods for statistics wide data, including both vector-valued and non-vector valued data (such as populations of attributed graphs prominent in neuroscience).  This will include methods for testing, clustering, classifying, and controlling such data, spanning unsupervised, supervised, and reinforcement learning.  We suspect that these will become  reference tools for such applications.
+
+
+
+% \para{Design and Implement Scalable Low-Resource Machine Learning Algorithms}
+% %
+% Statistical methods require computational implementations. Classical statistical techniques (for example, linear regression) have the benefit of decades of computational optimization which have resulted in reference implementations. Newer statistical methods will fail without novel complementary computational techniques. Previous strategies to address big data challenges are typically to distribute computations across many nodes in a cluster, thereby causing a huge computational bottleneck communicating across nodes.  In the past several years, we have developed \href{http://flashx.io}{FlashX}, which provides reference algorithms for low-resource analytics,
+% spanning both graph \cite{Mhembere2013b,Zheng2014} and matrix \cite{zheng2016semi,zheng2016flashmatrix,knor} computational primitives.  These implementations are optimized for solid-state harddrives and multi-core architectures, which are now the standards for mobile, personal, and even cloud computing.  Our existing tools enable processing billion node graphs, or billion feature matrices, on commodity hardware, and have resulted in DARPA funding a new start-up to commercialize this product.   In the next five years of research, we will complete low-resource scalable implementations of the basic set of computational primitives to enable all desirable machine learning algorithms.  Moreover, we will build interfaces to common programming languages, such as R and Python, to enable widespread utility.
+
+
+\vspace{15pt}
+\begin{mdframed} \cb{\headingfont Determine the Causal Mechanism of Mental and Behavioral Phenomenology To Increase Psychological Wellness Worldwide} \end{mdframed}
+
+% @jovo: something about scale agnostic, something about phylogeny "agnostic"
+
+% \para{Architect Scientific Pipelines to Reproduciblity Process and Analyze Data}
+%
+The process of scientific discovery is not composed merely of running a set of uncoupled methods on data, rather, consists of running a sequence of procedures, each forming a link in the chain of evidence in favor of new models with improved explanatory, predictive, or manipulative power.  Therefore, to complement the above tools, we have packaged them into domain-specific pipelines.
+Specifically, for each of the major experimental modalities in neuroscience, we have built pipelines that transform from raw data to the derivatives of interest to the community.  These modalities include optophysiology \cite{Vogelstein2009c, Vogelstein2010b, Yuste2011c},  electrophysiology \cite{Paninski2010, Carlson2013b, Carlson2013c}, array tomography \cite{weiler2014synaptic}, electron microscopy \cite{roncal2014vesicle,roncal2015automated,kasthuri2015saturated}, CLARITY \cite{kutten2016deformably,kutten2016diffeomorphic}, and multimodal magnetic resonance imaging \cite{gray2011magnetic, roncal2013migraine, mhembere2013computing}.
+For many of these modalities, our pipelines have become the reference pipelines in the field.  For example, in calcium imaging, our spike detection code is used by hundreds of labs, and has been ported to Python at least three independent times in GitHub alone.  Similarly, for MRI, our pipeline is by far the most used of all pipelines that utilize the BIDS specification (\url{https://hub.docker.com/r/bids/}).  
+% In the next five years, we will develop and extend our pipelines for CLARITY and Array Tomography data, two up and coming 3D gene mapping tools, to complement our existing structural and functional pipelines.  
+Together, these tools will, for the first time, enable answering a multitude of multimodal questions.
+
+
+
+
+% \vspace{15pt}
+% \begin{mdframed} \cb{Discover  Principles of ``Connectome Coding'',  characterizing the Mind and Brain} \end{mdframed}
+
+% \para{Discover  Principles of ``Connectome Coding'',  characterizing the Mind/Brain Relationship}
+%
+
+
+% \vspace{15pt}
+% \begin{mdframed} \cb{Build and Deploy Web-Services to Democratize and Accelerate Sciences} \end{mdframed}
+
+\vspace{15pt}
+\begin{mdframed} \cb{\headingfont Build and Deploy Tools to Democratize and Accelerate Data Driven Discovery} \end{mdframed}
+
+% \para{Build and Deploy Web-Services to Democratize and Accelerate Sciences}
+The scientific process stands on the shoulders of giants, building more accurate and precise models of our world and abilities to manipulate it to our liking.  This is a collective process, pulling from the best minds from across the globe.  And yet, the process of scientific discovery, as well as other forms of data driven discovery, is recently in crisis. A large fraction of published work is not reproducible. Even for that work that is reproducible, reproducing an analysis ``from soup to nuts'' is time consuming and tedious.  Bottlenecks include complicated software dependencies, lack of documentation, organized and open data, and more.  To that end, we have been developing foundational tools to democratize and accelerate scientific discovery across disciplines.  A comprehensive solution includes a hub for both data and ``digital experiments''. We have therefore built \href{http://neurodata.io}{NeuroData}, which provides capabilities to store, manage, and visualize multi-terabyte datasets in the cloud \cite{Burns13a,Harris2015,Weiler2014}.  Currently, NeuroData hosts hundreds of terabytes of state of the art neuroscience data spanning spatial, temporal, and phylogenetic scales, making it both the largest and most diverse neuroscience data repository, with thousands of unique visitors from around the globe each month over the last five years. It is also the \emph{only} repository that accepts terascale datasets, making it a de facto standard in the community. More recently, we have developed the concept of a ``digital experiment'', which links the data to a pipeline including visualization and quality control that runs in parallel in the cloud (see  \url{http://scienceinthe.cloud} for a demo)  \cite{kiar2016science}. This work attracted enough attention to  lead to a private company to approach and has now invested millions of dollars for us to create another start-up to commercialize these ideas.  In the next five years,  we will mature the concept of a digital experiment, and allow people to deposit along side data deposits, to build a hub of analyses that can trivially be reproduced, modified, and extended by the community, thereby accelerating scientific discovery.
+
+
+
+
+
+% \vspace{15pt}
+% \begin{mdframed} \cb{Summary} \end{mdframed}
+
+\para{Summary}
+%
+In summary, my team has been building reference tools across disciplines for a number of years.With generous funding from the Packard Fellowship for Science and Engineering, I will be able to complete building these transformational tools, and begin supporting their use in the community. More specifically, while tradition funding mechanisms enable our team to make new discoveries, it is difficult to fund both professional software engineers and support staff, to support the community of users that will continue to grow. Thus, the funding would support two full time individuals, one dedicated to deploy reference implementations of the various tools we build, and another dedicated to ``customer support'', therefore ensuring that this work can continue to be open source and open access.
+
+
+% @jovo: something about "reference" tools/theory/methods/implementations/pipelines.
+
+
+% @jovo: room for 1 slide/image
+
+% @jovo: did i not cite anything that i should have?
+
+\clearpage
+\small{
+\renewcommand{\section}[2]{}%
+\bibliography{library,ass}
+\bibliographystyle{ieeetr} %Science
+}
+
+% \clearpage
+% \pagenumbering{gobble}
+% \begin{mdframed} \bb{Postdoctoral Fellows and Ph.D. Students} \end{mdframed}
+
+% \begin{itemize}
+% 	\item Tyler Tomita, Ph.D. candidate in the Department of Biomedical Engineering
+% \end{itemize}
+
+
+
+\end{document}
